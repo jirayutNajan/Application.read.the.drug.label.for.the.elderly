@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/secondpage_background"
+    tools:context=".Information" >
+
+    <FrameLayout
+        android:id="@+id/frameImage"
+        android:layout_width="match_parent"
+        android:layout_height="231dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView2"
+            android:layout_width="161dp"
+            android:layout_height="192dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            app:shapeAppearance="@style/roundimageview"
+            app:srcCompat="@drawable/image_1" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/top_round_corner"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/readable"
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/inter_semibold"
+            android:scrollbars="vertical"
+            android:text="ชื่อ(ภาษาไทย): ยาธาตุน้ำขาวตรากระต่ายบิน"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/read"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/capture_button"
+            android:text="🔊"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drug_image"
+            app:layout_constraintVertical_bias="0.09" />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
